@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: black;
+  color: white;
+}
+
+.hero {
+  min-height: 40vh;
+  padding-top: 5rem;
+}
+
+.big-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4rem;
+  margin: 0;
+  position: relative;
+}
+
+/* From https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.card-holder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem
+}
+
+.card {
+  border: 2px solid white;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 250ms ease-in-out;
+}
+
+.card:hover {
+  transform: translate(0, -0.25rem);
+}
+
+.card-bottom {
+  align-self: flex-end;
+  width: 100%;
+}
+
+main {
+  margin-inline: auto;
+  max-width: 800px;
+  background-color: black;
+}
+
+footer {
+  text-align: center;
+}
+
+nav ul {
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+nav li {
+  display: block;
+  border-radius: 50vw;
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  padding: 0.5rem 1rem
+}
+
+nav .active {
+  background-color: white;
+  color: black;
+}
+
+nav a:hover, nav a:focus-visible {
+  text-decoration: underline 0.125rem currentColor;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+.unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.read-more {
+  float: left;
+  padding: 0.5rem 0;
+}
+
+.button-link {
+  float: right;
+  border-radius: 50vw;
+  padding: 0.5rem 1rem;
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+img.logo {
+  max-width: 2rem;
+}
+
+.typing::before {
+  content: "";
+  animation: typing 1.5s 0s 1;
+  color: white;
+}
+
+.typing {
+  animation: appear 1.5s steps(1, end) forwards;
+}
+
+/*
+.typing::after {
+  content: "_";
+  animation: cursor 1s 1.5s infinite forwards,
+    appear 2s steps(1, end) forwards;
+  color: white;
+}
+
+@keyframes cursor {
+  0%   {content: "_";}
+  50%  {content: "";}
+}
+*/
+
+@keyframes typing {
+  0%   {content: "_______";}
+  10%   {content: "l______";}
+  17%   {content: "lu_____";}
+  30%   {content: "luk____";}
+  41%   {content: "luke___";}
+  86%   {content: "luke-__";}
+  90%   {content: "luke-l_";}
+  100%   {content: "luke-la";}
+}
+
+@keyframes appear {
+  from {color: transparent;}
+  to {color: white;}
+}
