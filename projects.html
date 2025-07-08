@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>luke-la &mdash; Projects</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <nav>
@@ -16,5 +18,154 @@
       </ul>
     </nav>
   </header>
+  <main>
+    <nav id="projects-nav">
+      <ul class="unstyled vertical-nav">
+        <li><a href="#hexcodle-clone">Hexcodln't</a></li>
+        <li><a href="#html-editor">HTML Editor</a></li>
+        <li><a href="#orbital-ellipse-projection">Orbital Ellipse Projection</a></li>
+        <li><a href="#solar-system-sandbox">Solar System Sandbox</a></li>
+        <li><a href="#sticky-notes">Sticky Notes</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h1>My Projects</h1>
+      <hr />
+
+      <section id="hexcodle-clone" class="project-listing">
+        <h2>Hexcodln't</h2>
+        <div>
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">CSS</span>
+        </div>
+        <p>
+          Hexcodln't is a clone of the wordle inspired hexcode guessing game,
+          <a href="https://hexcodle.com/">Hexcodle</a>.
+        </p>
+        <p>
+          It's designed to look and preform similarly to Hexcodle, but is made entirely on the front end so it could be
+          served via a static site.
+        </p>
+        <p>
+          Hexcodln't uses a seeded psudo-random number generator to come up with colors based on the difference in date
+          between a hardcoded start date and the current time. Guesses are saved to localstorage by the days.
+          It's not a very complicated setup, but it seems relativly stable, excluding a notable edge case where the
+          device itself is moved across significant time zones.
+        </p>
+        <p><a href="https://luke-la.github.io/hexcodle-clone" class="button-link">Check out Hexcodln't</a></p>
+        <p><a href="https://github.com/luke-la/hexcodle-clone">
+            <img src="./res/github-mark-white.svg" alt="Github Logo" class="logo" />
+          </a></p>
+      </section>
+
+      <section id="html-editor" class="project-listing">
+        <h2>HTML Editor</h2>
+        <div>
+          <span class="tag">C#</span>
+          <span class="tag">.NET Framework</span>
+        </div>
+        <p>
+          When I first re-learned HTML/JS/CSS my class was taught in Visual Studio 2022, and I was very unhappy moving
+          from W3Schools' side by side editor to an IDE where I had to click run and launch a second program every time
+          I wanted to view a minor change.
+        </p>
+        <p>
+          Obviously other, more HTML-friendly editors exist, but at the time I decided I wanted to try making my own as
+          a pet project.
+        </p>
+        <p>
+          It features "Quick Buttons" which are a user-determined selection of HTML tags mapped to buttons on a toolbar.
+          The buttons are also key-bound to the function keys for more keyboard-oriented users. Additionally, there are
+          other editor standard features such as a tree-style view of the working directory, as well as the featured
+          in-editor preivew which is supported via WebView 2.
+        </p>
+      </section>
+
+      <section id="orbital-ellipse-projection" class="project-listing">
+        <h2>Orbital Ellipse Projection</h2>
+        <div>
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Vue3</span>
+        </div>
+        <p>
+          A small app that I made as a visualisation tool and to help break down some of the math I ran across while
+          working on my Solar System Sandbox.
+        </p>
+        <p>
+          It's designed to generate an orthographic projection of an orbital ellipse, which basically means a flattend
+          version, which is useful for displaying in 2d.
+        </p>
+        <p><a href="https://luke-la.github.io/orbital-ellipse-projection" class="button-link">Check out OEP</a></p>
+        <p><a href="https://github.com/luke-la/orbital-ellipse-projection">
+            <img src="./res/github-mark-white.svg" alt="Github Logo" class="logo" />
+          </a></p>
+      </section>
+
+      <section id="solar-system-sandbox" class="project-listing">
+        <h2>Solar System Sandbox</h2>
+        <div>
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Vue3</span>
+        </div>
+        <p>This is a work in progress.</p>
+        <p>Solar System Sandbox is a site for designing and viewing orbital patterns of solar systems.</p>
+        <p>It uses the same math as in my Orbital Ellipse Projection program but on a larger scale, more accurate units,
+          and with multiple bodies. It also supports bodies that orbit other bodies, (satellites and subsatellites) and
+          even binary pairs.</p>
+        <p>Future plans include simulation, presenting data that can be generated from orbital paths (such as apparent
+          size and brightness), and a catelog of preset systems.</p>
+      </section>
+
+      <section id="sticky-notes" class="project-listing">
+        <h2>Sticky Notes</h2>
+        <div>
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JSON</span>
+        </div>
+        <p>
+          Sticky Notes is a local-storage based visual organization tool.
+        </p>
+        <p>
+          Features options for text based notes, lists, and images (must be hosted elsewhere). Notes are organized into
+          collections called boards, which are unconnected workspaces for organizing notes on different topics. Boards
+          can be uploaded and downloaded as JSON files, for transfering between devices.</p>
+        <p>
+          The notes themselves are drag and drop, and expand to fit the text within them.
+        </p>
+        <p>
+          A number of other quality-of-life features exist, such as high-contrast themes and a snapping-grid for more
+          precise organization.
+        </p>
+        <p><a href="https://luke-la.github.io/sticky-notes" class="button-link">Check out Sticky Notes</a></p>
+        <p><a href="https://github.com/luke-la/sticky-notes">
+            <img src="./res/github-mark-white.svg" alt="Github Logo" class="logo" />
+          </a></p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <nav>
+      <ul class="vertical-nav">
+        <li>
+          <a href="https://github.com/luke-la">GitHub</a>
+        </li>
+        <li>
+          <a href="./404.html">Email</a>
+        </li>
+        <li>
+          <a href="https://luke-la.github.io">Portfolio</a>
+        </li>
+      </ul>
+    </nav>
+    <p><small>&copy;2025 Luke Armenia. All rights reserved</small></p>
+  </footer>
 </body>
+
 </html>
