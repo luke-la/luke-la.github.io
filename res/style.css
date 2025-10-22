@@ -37,6 +37,13 @@ a {
   font-size: 4rem;
   margin: 0;
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .hero {
@@ -57,7 +64,6 @@ a {
 
 .card-holder {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem
 }
 
@@ -96,6 +102,7 @@ a {
 main {
   margin-inline: auto;
   max-width: 800px;
+  padding: 10px;
   background-color: black;
   position: relative;
 }
@@ -114,16 +121,15 @@ nav ul {
 
 nav li {
   display: block;
-  border-radius: 50vw;
-  text-decoration: none;
   font-weight: bold;
   color: inherit;
   list-style: none;
   padding: 0;
 }
 
-nav .active {
+nav .active a {
   background-color: white;
+  border-radius: 50vw;
   color: black;
 }
 
