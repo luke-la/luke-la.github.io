@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>luke-la</title>
   <link rel="stylesheet" href="./res/style.css">
+  <link rel="stylesheet" href="./res/home.css">
+  <script defer src="./js/clock.js"></script>
 </head>
 
 <body>
@@ -19,72 +21,54 @@
     </nav>
   </header>
   <main>
-    <section class="hero">
+    <section class="bio">
       <h1 id="big-name" class="typing noselect">luke-la</h1>
-      <p>My name is <b>Luke Armenia</b>. I'm a software developer specializing in <b>Web Apps</b>, <b>UX/UI</b>, and <b>Frontend</b>.</p>
-      <nav class="links">
-        <ul>
-          <li>
-            <a href="https://github.com/luke-la" title="GitHub">
-              <img src="./res/github-mark-white.svg" alt="Github Logo" class="logo" />
-            </a>
-          </li>
-          <li>
-            <a href="./404.html" title="Email">
-              <img src="./res/closed-envelope-svgrepo-com.svg" alt="Email Logo" class="logo" />
-            </a>
-          </li>
-          <li>
-            <a href="https://luke-la.github.io" title="Portfolio">
-              <img src="./res/world-wide-symbol-inversed-svgrepo-com.svg" alt="Personal Site Logo" class="logo" />
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <p><small>I am <b>Luke Armenia</b>, a 22yo programmer and artist living in the PNW.</small></p>
+      <ul class="unstyled horizontal-list center">
+        <li>
+          <a href="https://github.com/luke-la" title="GitHub">
+            <img src="./res/github-mark-white.svg" alt="Github Logo" class="logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://luke-la.github.io" title="Personal Site">
+            <img src="./res/world-wide-symbol-inversed-svgrepo-com.svg" alt="Personal Site Logo" class="logo" />
+          </a>
+        </li>
+        <li>
+          <a href="./404.html" title="Email">
+            <img src="./res/closed-envelope-svgrepo-com.svg" alt="Email Logo" class="logo" />
+          </a>
+        </li>
+      </ul>
     </section>
 
-    <section>
-      <hr />
-      <h2>Featured Projects</h2>
-      <div class="card-holder">
-        <section class="card">
-          <h3>Sticky Notes</h3>
-          <p>A visual organizing tool for making notes and storing them</p>
-          <div class="card-bottom">
-            <a href="./projects.html#sticky-notes" class="read-more">Read More</a>
-            <a href="https://github.com/luke-la/sticky-notes" class="button-link">Site</a>
-          </div>
-        </section>
-        <section class="card">
-          <h3>HTML Editor</h3>
-          <p>A simple HTML editor that features hotkey based tagging, working with multiple files, and an in-editor preview.</p>
-          <div class="card-bottom">
-            <a href="./projects.html#html-editor" class="read-more">Read More</a>
-            <a href="https://github.com/luke-la/html-editor" class="button-link">Site</a>
-          </div>
-        </section>
-        <section class="card">
-          <h3>Solar System Sandbox</h3>
-          <p>Details Coming Soon!</p>
-        </section>
+    <section class="clock">
+      <div>
+        <p class="center"><small><span id="clock-text">00:00:00</span></small></p>
+        <canvas id="clock-canvas" width="200" height="200"></canvas>
       </div>
+    </section>
+
+    <section class="sitemap">
+      <h2>sitemap</h2>
+    </section>
+
+    <section class="featured-project">
+      <h2 class="center">Featured Project</h2>
+      <img src="./res/stickynotes_screenshot.png" class="thumbnail">
+      <p>A Sticky Notes web app.</p>
+      <p><a href="./projects.html#sticky-notes" class="read-more">Read More</a></p>
+      <p>
+        <a href="https://luke-la.github.io/sticky-notes" class="button-link">Sticky Notes</a>
+      </p>
+    </section>
+    <section>
+
     </section>
   </main>
   <footer>
-    <nav>
-      <ul class="vertical-nav">
-        <li>
-          <a href="https://github.com/luke-la">GitHub</a>
-        </li>
-        <li>
-          <a href="./404.html">Email</a>
-        </li>
-        <li>
-          <a href="https://luke-la.github.io">Portfolio</a>
-        </li>
-      </ul>
-    </nav>
-    <p><small>&copy;2025 Luke Armenia. All rights reserved</small></p>
+    <p><small>&copy;2025 Luke Armenia (luke-la). All rights reserved</small></p>
   </footer>
 </body>
 

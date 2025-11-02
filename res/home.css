@@ -1,0 +1,83 @@
+main {
+  margin-inline: auto;
+  max-width: 768px;
+  background-color: black;
+  position: relative;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+main > section {
+  border: 2px solid white;
+  padding: 1rem;
+}
+
+section.bio {
+  grid-column: 1 / span 3;
+}
+
+#big-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4rem;
+  margin: 0;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#big-name ~ p {
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+.typing::before {
+  content: "";
+  animation: typing 1.5s 0s 1;
+  color: white;
+}
+
+.typing {
+  animation: appear 1.5s steps(1, end) forwards;
+}
+
+@keyframes typing {
+  0%   {content: "";}
+  10%   {content: "l";}
+  17%   {content: "lu";}
+  30%   {content: "luk";}
+  41%   {content: "luke";}
+  86%   {content: "luke-";}
+  90%   {content: "luke-l";}
+  100%   {content: "luke-la";}
+}
+
+@keyframes appear {
+  from {color: transparent;}
+  to {color: white;}
+}
+
+section.clock {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+section.clock p {
+  margin-block: 0;
+}
+
+section.clock canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+section.sitemap {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+section.featured-project {
+  grid-column: span 2;
+}
